@@ -1,0 +1,71 @@
+﻿
+
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Dasboard/Index">
+                <i class="mdi mdi-view-dashboard menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Message/ReceiverMessage">
+                <i class="mdi mdi-message-reply menu-icon"></i>
+                <span class="menu-title">Gelen Mesajlar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Message/SenderMessage">
+                <i class="mdi mdi-message-outline menu-icon"></i>
+                <span class="menu-title">Giden Mesajlar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Message/SendMessage">
+                <i class="mdi mdi-message-draw menu-icon"></i>
+                <span class="menu-title">Yeni Mesaj</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Default/Index">
+                <i class="ti-announcement menu-icon"></i>
+                <span class="menu-title">Duyurular</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Profile/Index">
+                <i class="mdi mdi-account-box menu-icon"></i>
+                <span class="menu-title">Profil</span>
+            </a>
+        </li>
+         @if(User.Identity.IsAuthenticated && User.IsInRole("Admin")){
+        <li class="nav-item">
+            <a class="nav-link" href="/Dashboard/Index">
+                    <i class="mdi mdi-account-outline menu-icon"></i>
+                <span class="menu-title">Admin Paneli</span>
+            </a>
+        </li>
+         }
+        <li class="nav-item">
+            <a class="nav-link" href="/Writer/Login/LogOut">
+                <i class="mdi mdi-logout menu-icon"></i>
+                <span class="menu-title">Çıkış Yap</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Skydash Admin</title>
+<!-- plugins:css -->
+<link rel="stylesheet" href="~/skydash/vendors/feather/feather.css">
+<link rel="stylesheet" href="~/skydash/vendors/ti-icons/css/themify-icons.css">
+<link rel="stylesheet" href="~/skydash/vendors/css/vendor.bundle.base.css">
+<!-- endinject -->
+<!-- Plugin css for this page -->
+<link rel="stylesheet" href="~/skydash/vendors/mdi/css/materialdesignicons.min.css">
+<!-- inject:css -->
+<link rel="stylesheet" href="~/skydash/css/vertical-layout-light/style.css">
+<!-- endinject -->
